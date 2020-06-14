@@ -1,0 +1,48 @@
+Wow, first off, a huge congrats. You're about to start the final
+project of the course. Amazing job making it all the way here. I hope you've been having as much
+fun as I have on this journey. We're going to be working on our final
+project using Jupyter notebooks. You might be starting to feel
+pretty confident using them. But remember if you have any
+issues you can always ask for help in the discussion forums. Okay, before we dive in, we're going to
+chat a little bit about what you'll be doing for the project,
+it's going to be really fun. The goal of the project is
+to create a word cloud. A word cloud is an image that's
+made up of different sized words. Usually the sizes of the words
+are determined by how many times each word appears in a specific text. To create the image itself, we're going to use an external Python
+module called creatively Word cloud. [LAUGH] Your job is to create a script
+that would go through the text and count how many times each word appears. We've done this a few times already,
+any ideas how we should tackle this one? If you're thinking of using a dictionary
+to count how many times each word appears, then. Ding ding ding, good answer! You're going to prepare a dictionary and
+use that as a parameter for the word cloud module,
+not too tricky, right? I think you can handle a little more,
+so two things you have to watch out for. One, punctuation marks, before
+counting the frequency of the words, you need to make sure that there
+are no punctuation marks in the text. If you don't, a string example
+with a comma at the end would be different from a string
+example with a dot at the end. So before you put words
+into the dictionary, you have to clean up the text
+to remove any punctuation marks. And the second thing we want to
+keep our word cloud interesting. Certain words in our
+language crop up a lot and if we include all of these we're going
+to get a pretty dull word cloud. Think about words like, the, two or if. They usually appear
+a whole lot in text but aren't too relevant to
+the text's overall message. We want our Cloud to show words that
+are relevant to the text we're using for the input. So you need to find a way
+to exclude irrelevant or uninteresting words when
+processing the text. For the input,
+you're going to upload a text file. You can choose any text file you like for
+your input. It could be the contents of a website,
+a full novel or even everything that one
+author has ever written. You just need to make sure
+that it's one text file, so that it can be processed by the code. Okay, before jumping into the project, remember you can re-watch this
+video If something isn't clear. Yep, I'm starting to sound
+like a broken record, but this time it's extra extra important. This final project is the real test of how
+much you've gotten your head around and can highlight areas you
+need to brush up on. So we want you to be super clear on
+what you need to do on that point. You'll find an overview of what you
+have to do in the next reading. Can you guess the best way
+of tackling this problem? Yep, you got it, our step-by-step
+approach that we outlined earlier. Understand the problem statement,
+research available options, plan your approach,
+write your code and finally execute. Okay, feeling good? Ready to go? Remember, you know this stuff and
+you've totally got it.
