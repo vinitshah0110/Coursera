@@ -1,3 +1,13 @@
+'''
+Once you have made the necessary changes to the program and it has been run successfully reading the above JSON data, run the following
+SQL command:
+
+SELECT hex(User.name || Course.title || Member.role ) AS X FROM 
+    User JOIN Member JOIN Course 
+    ON User.id = Member.user_id AND Member.course_id = Course.id
+    ORDER BY X
+'''
+
 import json
 import sqlite3
 
