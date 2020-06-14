@@ -1,0 +1,29 @@
+July 31 20:02:26 mycomputername cacheclient[50070]: ERROR Encapsulating packets
+July 31 20:05:36 mycomputername updater[23489]: INFO Healthy resource usage
+July 31 20:21:06 mycomputername utility[67718]: INFO Defragmenting hard drive
+July 31 20:38:05 mycomputername kernel[30846]: ERROR AssertionError 'False' is not 'True'
+July 31 20:42:44 mycomputername CRON[95019]: INFO Access permitted
+July 31 20:48:06 mycomputername kernel[51099]: WARN PC Load Letter
+July 31 20:57:02 mycomputername CRON[23996]: INFO Googling the answer
+July 31 21:05:47 mycomputername utility[67348]: ERROR The cake is a lie!
+July 31 21:06:46 mycomputername kernel[80105]: ERROR lp0 on fire
+July 31 21:26:11 mycomputername process[18312]: WARN Computer needs to be turned off and on again
+July 31 21:28:55 mycomputername jam_tag=psim[89637]: INFO Packets sent successfully
+July 31 21:48:30 mycomputername kernel[33330]: ERROR Syntax issue
+July 31 22:05:31 mycomputername process[37921]: ERROR Process failed
+July 31 22:07:54 mycomputername cacheclient[12017]: ERROR Process failed
+July 31 22:14:37 mycomputername utility[78832]: INFO Healthy resource usage
+July 31 22:22:34 mycomputername updater[78750]: ERROR ID: 10t
+July 31 22:41:00 mycomputername jam_tag=psim[40956]: ERROR The cake is a lie!
+July 31 22:42:51 mycomputername NetworkManager[28895]: INFO I'm sorry Dave. I'm afraid I can't do that
+July 31 23:15:22 mycomputername jam_tag=psim[75013]: ERROR Failed process [13966]
+July 31 23:17:05 mycomputername system[88316]: ERROR 418: I'm a teapot
+July 31 23:20:09 mycomputername system[42918]: ERROR Out of ink
+July 31 23:28:49 mycomputername utility[40452]: INFO Checking process [16121]
+July 31 23:29:25 mycomputername utility[22941]: WARN Failed to start CPU thread[39016]
+July 31 23:30:46 mycomputername process[99294]: WARN Computer needs to be turned off and on again
+July 31 23:35:49 mycomputername dhcpclient[10726]: INFO Googling the answer
+July 31 23:36:29 mycomputername updater[86053]: ERROR AssertionError 'False' is not 'True'
+July 31 23:40:05 mycomputername utility[88068]: INFO Generating Logs
+July 31 23:48:17 mycomputername CRON[28813]: WARN Please send help I am stuck inside the internet
+July 31 23:53:58 mycomputername CRON[59985]: INFO Successfully connected
