@@ -1,0 +1,147 @@
+To evaluate the overall fit of
+the predicted values of the response variable to the observed values and
+to look for outliers, we can examine a plot of the standardized
+residuals for each of the observations. The standardized residuals
+are simply the residual values transformed to have a mean of zero and
+a standard deviation of one. This transformation is called normalizing
+or standardizing the values so that they fit a standard
+normal distribution. In a standard normal distribution 68% of
+the observations are expected to fall within one standard deviation of the mean. So between -1 and 1 standard deviations. And 95% of the observations
+are expected to fall within 2 standard deviations of the mean. Here is the code to graph the residuals
+for each observation in Python. In this first line of code,
+we are creating an object called stdres. For which we use the pandas
+DataFrame function to convert the array of standardized
+residuals to a data frame. Reg3 is the name of the object
+that contains the results of our regression analysis and resid_pearson tells Python to use
+the standardized residuals from the model. The second line of code uses
+the mat plot lib.plot function, to generation a plot of the standardized
+residuals in an object that we call fig2. The o tells Python to use
+circles as value markers. And the ls='none', in single quotes, tells Python to
+not connect the markers with a line. Finally, the third line of code draws a
+horizontal line on the graph at a value of zero on the vertical axis using color
+equals r, which makes the line red. Then we label the graph axes. If we take a look at this plot, we see that most of the residuals fall
+within one standard deviation of the mean. So basically, they're either between -1 or
+1, and all but a few countries have residuals that are more than 2 standard
+deviations above or below the mean of 0. With the standard normal distribution,
+we would expect 95% of the values of the residuals to fall between two
+standard deviations of the mean. Residual values that are more than two
+standard deviations from the mean in either direction, are a warning sign
+that we may have some outliers. However, there are no
+observations that have three or more standard deviations from the mean. So we do not appear to
+have any extreme outliers. In terms of evaluating
+the overall fit of the model, there's some other rules of thumb that you
+can use to determine how well your model fits the data based on
+the distribution of the residuals. If more than 1% of our observations has standardized residuals with
+an absolute value greater than 2.5, or more than 5% have an absolute value
+of greater than or equal to 2, then there is evidence that the level of
+error within our model is unacceptable. That is the model is a fairly
+poor fit to the observed data. None of the residuals from our value
+exceeded an absolute value of 2.5. But 5.4% were greater than or
+equal to an absolute value of 2.0. This suggests that the fit of the model
+is relatively poor and could be improved. The biggest contributor to poor model fit is leaving out important
+explanatory variables. In order to improve the fit of this model, we should include more
+explanatory variables to better explain the variability in our
+female employment rate response variable. The following Python code can be
+used to generate a few more plots to help us determine how specific
+explanatory variables contribute to the fit of our model. In this example we're examining
+the Internet use explanatory variable but we can also look at these plots for
+other explanatory variables. Here we are using the plt.figure
+function to create an object called fig3 that contains an empty figure
+with figsize equal to 12,8. These numbers specify
+the size of the plot image. Each unit is equal to 80 pixels. 12 times 80 equals 960 pixels and
+8 times 80 equals 640 pixels. So what we're doing with
+the fig size command here is generating a 960 by
+640 pixel plot image. You can change the size of this image by
+changing the values in the parenthesis. The second line of code uses
+the graphic.plot_regress_exog function from the stats model library
+to generate multiple diagnostic plots. In the parenthesis, we specify the name
+of the object that has our model results, which is reg3 followed by a comma. Then in quotes we specify the explanatory
+variable that we want to plot followed by a comma. Finally fig equals fig 3 tells
+Python to put the information from our sm.graphics.plot_regress_exog exog
+function into the fig 3 plot object. Then we ask Python to print the plots. The primary plots of interest
+are the plots of the residuals for each observation of different of values of
+Internet net use rates in the upper right hand corner and partial regression plot
+which is in the lower left hand corner. The plot in the upper right hand
+corner shows the residuals for each observation at different
+values of Internet use rate. There's clearly a funnel shaped
+pattern to the residuals where we can see that the absolute
+values of the residuals are significantly larger at lower
+values of Internet use rate. But get smaller, closer to zero,
+as Internet use rate increases. But then they start to get
+larger at higher levels. This is consistent with the other
+aggression diagnostic plots that indicate that this model does not
+predict female employment rate as well for countries that have either high or
+low levels of Internet use rate. But is particularly worse predicting
+female employment rates for countries with low Internet usage. Similar to our urban rate variable, there
+also appears to be a sort of a curve, or linear pattern to these observations. Where the residuals seem to get
+larger again for countries for which Internet use rates exceeds
+about 80 per 100 residents. This suggests that the association
+between Internet use rate and female employment rate
+may also be curvilinear. So maybe we also want to add a second
+order polynomial, or quadratic term, for Internet use rate as an explanatory
+variable to the model as well. Finally, because we have multiple
+explanatory variables, we might want to take a look at the contribution of
+each individual explanatory variable to model fit, controlling for
+the other explanatory variables. One type of plot that does this,
+is the partial regression residual plot. The third plot, in the lower left hand corner,
+is a partial regression residual plot. It attempts to show the effect
+of adding Internet use rate as an additional explanatory
+variable to the model. Given that one or more explanatory
+variables are already in the model. For the Internet use rate variable, the values in the scatter plot
+are two sets of residuals. The residuals from a model predicting
+the female employment rate response from the other explanatory variables, excluding
+Internet use, are plotted on the vertical access, and the residuals from the model
+predicting Internet use rate from all the other explanatory variables
+are plotted on the horizontal access. What this means is that the partial
+regression plot shows the relationship between the response variable and
+specific explanatory variable, after controlling for
+the other explanatory variables. We can examine the plot to see if the
+Internet use rate residuals show a linear, or non-linear pattern. If the Internet use variable shows
+a linear relationship to the dependent variable after adjusting for
+the variables already in the model, it meets the linearity assumption
+in the multiple regression. If there is an obvious non-linear pattern,
+this would be additional support for adding a polynomial term for
+Internet use rate to the model. When we take a look at the plot for
+Internet use rate in the lower left-hand corner, we see that,
+in contrast to the plot of the residuals at different values of
+Internet use rate without adjusting for the urban rate variables, which is shown
+above, the partial regression plot for Internet use does not clearly
+indicate a non-linear association. Rather, the residuals are spread
+out in a random pattern around the partial regression line. In addition, many of the residuals
+are pretty far from this line, indicating a great deal of female
+employment rate prediction error. This suggests that
+although Internet use rate shows a statistically significant
+association with female employment rate, this association is pretty weak after
+controlling for urbanization rate. We can look at the partial
+regression residual plots for each of the other explanatory
+variables as well. 
+
+Finally, we can examine a leverage plot
+to identify observations that have an unusually large influence on
+the estimation of the predicted value of the response variable, female employment
+rate, or that are outliers, or both. The leverage of an observation
+can be thought of in terms of how much the predicted scores for
+the other observations would differ if the observations in question
+were not included in the analysis. The leverage always takes on
+values between zero and one. A point with zero leverage has no
+effect on the regression model. And outliers are observations with
+residuals greater than 2 or less than -2. We use the following Python code
+to generate a leverage plot. 
+
+We use the stats model
+graphics function again, but this time we use
+the code influence_plot. In parentheses, we include the name of
+the object that has the result of our regression analysis, reg3,
+followed by a comma. Size=8 is an option to make the points on
+the plot smaller than the default size so that they're easier to distinguish. One of the first things we see in
+the leverage plot is that we have a few outliers, contents that have residuals
+greater than 2 or less than -2. We've already identified some of these
+outliers in some of the other plots we've looked at, but this plot also tells us
+that these outliers have small or close to zero leverage values, meaning that
+although they are outlying observations, they do not have an undue influence on
+the estimation of the regression model. On the other hand, we see that there are a few cases
+with higher than average leverage. But one in particular is more obvious
+in terms of having an influence on the estimation of the predicted
+value of female employment rate. This observation has a high leverage but
+is not an outlier. We don't have any observations that
+are both high leverage and outliers.

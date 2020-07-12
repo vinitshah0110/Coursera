@@ -1,0 +1,48 @@
+But what happens if we control for
+major depression? As you can see, both social phobia and
+major depression are independently associated with the likelihood
+of having nicotine dependence. Given that both social phobia and major
+depression are positively associated with a likelihood of being nicotine dependent. In our predictor or
+splinter variables are both binary, we can interpret the odds
+ratio in the following way. Young adult daily smokers,
+the sample population with social phobia are 2.3 times more likely to have
+nicotine dependence than young adult daily smokers without social phobia
+after controlling for major depression. Also, daily smokers with major
+depression are 3.7 times more likely to have nicotine dependence
+than daily smokers without depression, after controlling for
+the presence of social phobia. Because the confidence intervals
+on our odds ratios overlap, we can not say that major depression is
+more strongly associated with nicotine dependence than the social phobia. For the population of
+young adult daily smokers, we can say that those with social phobia
+are anywhere between 1.2 to 4.6 times more likely to have nicotine dependence
+than those without social phobia. And those with major depression are
+between 2.7 and 5.0 times more likely to have nicotine dependence than
+those without major depression. Both of these estimates
+are calculated after accounting for the alternate disorder. As with multiple regression,
+when using logistic regression, we can continue to add variables to our
+model in order to evaluate multiple predictors of our binary
+categorical response variable. Presence or
+absence of nicotine dependence symptoms. Another example of confounding occurs when
+a logistic progression model is run to test the association between panic
+disorder as the explanatory variable and nicotine dependence,
+the response variable. Panic disorder is an anxiety disorder
+characterized by recurring panic attacks. Here we see a significant association, and
+note that young adult daily smokers with panic disorder in our sample
+are 2.1 times more likely to have nicotine dependence than young adult
+daily smokers without panic disorder. However, when we add major
+depression to the model, panic disorder is no longer significantly
+associated with nicotine dependence. Here we have an example of confounding. We would say that major depression
+confounds the relationship between panic disorder and nicotine dependence
+because the P-Value for panic disorder is no longer significant when major
+depression is included in the model. Further, because panic disorder is
+no longer associated with nicotine dependence, we would not interpret
+the corresponding odds ratio, but would interpret the significant odds
+ratio between major depression and nicotine dependence. That is, young adult smokers with major
+depression are 3.6 times more likely to have nicotine dependence than young
+adult smokers without major depression after controlling for panic disorder. >> By now you should be feeling
+a little more comfortable with the idea of generating a regression model
+when your outcome variable is binary. Remember to always code
+your outcome variable so 0 means no outcome, and
+a 1 means that an outcome occurred. This is true whether your outcome is
+positive, such as graduating from college, or negative,
+such as developing nicotine dependence.

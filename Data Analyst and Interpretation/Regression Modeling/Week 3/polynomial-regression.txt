@@ -1,0 +1,118 @@
+So far, we have used regression
+to test linear associations between our explanatory variables,
+and our response variable. By linear, we mean that the association can be
+explained best with a straight line. Here is a scatter plot showing a linear
+association between urban rate and Internet use rate from
+the gap minder data set. That is we can a draw a straight
+line to the scatter plot and this regression line does a pretty
+good job of catching the association. But what if the association is not linear? That is,
+what if the association is curvilinear? For example, take the relationship
+between anxiety and performance. It is a well-established phenomenon
+that both low anxiety and high anxiety are related
+to poor performance. But that a moderate level of anxiety
+is optimal to perform at your best. If you drew a straight linear
+aggression line with these points. Most points would be really
+far away from the line, meaning that there's a lot
+of prediction there. The best fitting line is not straight
+rather it is one that curve to catch the non-linear nature
+of these association. Here is an example of a less extreme curve
+linear association between urban rate, and female employment rate,
+with a linear regression line. Returning to the Python script for the gap minder data set, the code to
+produce this scatter plot is here. Here we are creating an object called
+scat1, that will be our scatter plot. We then use the C born rig plot function, to plot our explanatory
+x variable urban rate. In our Y response variable, female
+employment rate separated by a comma. Note that the variable names for both variables have
+quotation marks around them. After another comma, we add scatter=True
+to tell Python to plot a scatter plot and then we tell it which data set to use. You can see that it looks like
+female employment rate decreases as urbanization rate increases. But that around urban rates of 80 or higher, it looks like female
+employment rate appears to increase. So it looks like kind of
+a u-shaped association. Just like with the anxiety and performance
+association a straight linear regression line isn't doing a good job of picking up
+the curvilinear part of the association. We can actually fit a line that curves,
+to better fit the association, by adding a polynomial term. For example, we could add a second
+order polynomial, or quadratic term, to draw the line of best fit that
+captures the curvature that we're seeing. To do this, we use the same seaborn
+regplot function code that was used to draw the scatter plot with
+the linear brushing line. The difference is that we add some
+additional code within the parentheses with the seaborn regplot function. We add order=2 to ask for a quadratic line
+that includes the second order polynomial. If we run the code for both the linear and
+quadratic scatterplots at the same time. We will get a single scatterplot with
+both the straight linear line and the curved rush line. Now my scatterplot shows the original
+linear regression line in blue, and the quadratic
+regression line in green. Notice how the quadratic line does
+a better job of capturing the association at lower and higher urbanization rates. The points at these levels
+are closer to the quadratic, or second-order polynomial curve. Meaning that the expected or predicted
+values are closer to the observed values. So based on just looking at the two
+curves, it looks like the green quadratic curve fits the data better
+than the blue straight line. But we can be even more sure of this
+conclusion if we test to see whether adding a second order polynomial
+term to our aggression model gives us a significantly better fitting model. I do this by simply adding another
+variable that is the squared value of my explanatory x variable, x squared,
+to my regression model. First, let's test my regression model for just the linear association between
+urbanization rate and female employment rate using the ols function from
+the stats model API formula library. Note that we have centered our urban
+rate quantitative explanatory variable. Urban rate, underscore, c. Centering is especially important when
+testing a polynomial regression model. Because it makes it considerably easier
+to interpret the regression coefficients. If we look at the results, we can
+see from the significant P value and negative parameter estimate
+that female employment rate is negatively associated
+with urbanization rate. So the linear association,
+the blue line in the scatter plot, is statistically significant. But the R-square is 9%, indicating
+that the linear association of urban rate is capturing only about 9% of the
+variability in female employment rating. But what happens if we allow that straight
+line to curve by adding a second order polynomial to that regression equation. The Python code to do this is here. As you can see, it's the same code as for the linear regression model with
+the exception of some additional code. Specifically if you look at the formula we
+will now see that we have added another term to the model, that is the square
+of the urban rate explanatory variable. Stats model uses patsy formula language. Which is what we include inside
+the quotes when we name our response and explanatory variables, and any other
+variables we want to include in the model. Patsy provides a built-in function I,
+called the identity function, that just returns the input
+of what's in the parentheses. So in this case, the I,
+urbanrate star star two, returns a variable that it urbanrate raised to the
+power of two, that is, urbanrate squared. This term is our second order polynomial,
+or quadratic term. When we look at the table of results, we
+see that the value for the linear term for urban rate is negative, and
+the p value is less than 0.05. In addition, the quadratic term is
+positive insignificant, indicating that the curvilinear pattern we observed in our
+scatter plot is statistically significant. A negative linear coefficient and a positive quadratic coefficient
+indicates that the curve is convex. Such that starts high, then goes down,
+and then starts to go up again. This is consistent with the bowl shape
+pattern, this is consistent with bowl shaped quadratic curve we saw
+earlier in our scatter plot. In addition, you see that
+the R square increases to .16. Which means that adding
+the quadratic term for urban rate, increase the amount of
+variability in female employment rate that can be explained by
+urbanization rate from 9% to 16%. Together, these results suggest
+that the best fitting line for this association is one that
+includes some curvature. Note the two warnings in the output. The first warning is simply reminding you
+that the estimation of the standard errors assumes that your regression
+assumptions are met and that your model is correctly specified. The second warning indicates there
+are variables in the model that are highly correlated with each other. This is an indicator of multicorrelarity, which can create some instability in
+the estimation of the parameter estimates. And make it difficult to interpret them. Ordinarily if we have two highly
+correlated explanatory variables we would wanna put only one of them in the model. Obviously the second order polynomial
+which is urban rate squared is correlated with the urban rate. However in this case, we want to keep it in the model because we
+specifically want to capture the curve of linear relationship that was
+evident in our scatter plot. This brings us to another important
+characteristic of centering. Centering significantly reduces
+the correlation between the linear and quadratic variables in
+a polynomial regression model. We can also test more complex non linear
+associations by adding higher order polynomials. For example, you can add cubic,
+third order polynomial. Or even quartic, fourth order polynomial
+terms for the model to account for more complex curves. For example, this scatter plot
+shows more that one curve. In this case, adding a cubic,
+or third order polynomial term, might improve the fit of the model. One thing to keep in mind now is that
+modeling is more complex curve in the sample data, but often improve
+the fit of the model for that sample. However, it also increases the risk of
+doing something called Overfitting. Overfitting occurs when you get a model to
+explain you're responsible did really well on the sample. But that model becomes very
+specific to the sample data. That is it capitalizes on the variability
+that's present in that sample. The down side is that an overfitted
+model that fits the sample really well, may not fit well at all on another
+sample drawn from the same population. An overfitted model is biased toward
+the sample it was developed on. And consequently,
+the conclusions we draw from that model may not be representative
+of the population. So, we try to establish balance, where we identify a model
+that fits our sample well. But will also fit well if we
+tested it from another sample from the same population. This is called the bias-variance tradeoff
+and we will discuss this in more detail in the fourth course of the specialization
+machine learning for data analysis.

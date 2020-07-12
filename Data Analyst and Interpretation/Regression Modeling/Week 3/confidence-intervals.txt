@@ -1,0 +1,45 @@
+So far we have just interpreted
+the estimate regression coefficients. However, remember that our data set
+is just a sample of the population. So, the regression coefficients that
+we get from the analyses on our sample are only estimates of the true
+population parameters. That's why they're called
+parameter estimates. For example if we were to draw another
+sample from our population, and test the same regression
+model on the new sample, the parameter estimates are not likely to
+be the same as they were with our original sample, this is due to
+sampling variability, meaning that the sample we draw is not
+likely to be exactly like the population. To get a better understanding
+of hour our sample estimates represent the population values,
+we can look at confidence intervals. Confident intervals tell us which values
+of the parameter estimates are plausible in the population. Typically, we look at 95%
+confidence intervals which tell us with 95% certainty the range of parameter
+estimate values that includes the true population parameter. That is, we are 95% certain that
+the true population parameter fall somewhere between the lower and upper confidence limits that are estimated
+based on a sample parameter estimate. Let's re-run the code for a multiple regression model predicting
+nicotine dependent symptoms. Now, if you take a look at the output
+you'll see that the results are the same. Although there's an additional
+set of columns for the parameter estimates that provide
+the estimated lower, and upper limits for the 95% confidence interval for
+each parameter estimate. For example, if we take a look
+at the parameter estimate for major dep life, we see that it is 1.3. Meaning that on average
+individuals with major depression have 1.3 more nicotine dependent symptoms
+than people without major depression. This is our point estimate
+of the population perimeter. If we look at the conference interval
+though we see that it ranges from 1.1 to 1.5. Meaning that we're 95% certain, that the true population parameter for the
+association between major life depression, and number of nicotine dependant symptoms
+fall somewhere between 1.1 and 1.5. That is, in the population,
+there's a 95% chance that people with major life depression
+have anywhere between 1.1 and 1.5 more nicotine dependent symptoms
+than people without major depression. Also note that our dysthymia variable,
+dyslife, had a P value of .19 which is
+not statistically significant. We could not reject the null hypothesis
+of no association between dysthymia, and number of nicotine dependent symptoms,
+afterly adjusted for major life depression, and the other
+explanatory variables in the model. If we take a look at the confidence
+interval for this variable. We see that it ranges from -0.1 to 0.7,
+which includes a value of 0 in that range. This means that we can't rule out with
+95% confidence the possibility that the association between dysthymia, and
+number of nicotine dependent symptoms, and for adjusting for
+other variables in the model, is 0. In linear regression, when you have a non
+significant P value, the 95% confidence interval for the parameter estimate will
+include a value of 0, no association.

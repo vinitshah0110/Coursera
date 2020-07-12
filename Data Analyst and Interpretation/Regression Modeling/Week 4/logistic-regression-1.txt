@@ -1,0 +1,95 @@
+Multiple regression is the appropriate
+statistical tool when your response variable is quantitative. If your response variable is
+categorical with two levels. We need to use another multivariate tool,
+logistic regression. Let's use the nesarc data for an example. We will use the same stats model formula
+library which we imported as SMF. The function that we will
+use is the logitt function. Our response variable,
+nicotinedep is binary. Coded one equals yes or
+zero equals no to nicotine dependents. And so
+we should use a logistic regression. We also have an explanatory
+variable called SOCPDLIFE that indicated the presence or
+absence of social phobia. Which is an anxiety disorder marked by a
+strong fear of being judged by others and of being embarrassed. First we create an object
+called lreg1 which will include the results of
+our logistic regression model. Then we type an equal sign and then
+the function to run the logic regression. smf.logit. In parentheses we type our formula and
+the name of the dataset, sub1, and .fit followed by open and
+closed parentheses. The same way we would for
+linear multiple regression analysis. Then we ask Python to print
+the fit statistics for the logistic regression model. Let's take a look at the output here. Similar to the multiple regression output. You can see the number of observations, with the complete data
+that we used in the model. Here we see the name of
+our response variable. Nicotinedep, also is similar to
+the multi regression output. We see a table with the prime
+assessments and the P value. Notice also that our regression is
+significant at a P value of less than 0.0001. Using the prime assessments we
+could generate the linear equation. Nicotinedep is a function
+of 0.38 plus 1.23 times SOCPDLIFE But let's really
+think about the equation some more. >> In a regression module,
+our response variable was quantitative. And so
+it could theoretically take on any value. In a logistic regression, our response variable only takes
+on the values zero and one. Therefore, if I try to use this
+equation as a best fit line, I would run into some problems. Instead of talking in decimals
+it may be more helpful for us to talk about how the probability
+of being nicotine dependent changes based on the presence or
+absence of social phobia. For example,
+are those with social phobia more or less likely to be nicotine dependent
+than those without social phobia? Instead of true expected values,
+we want probabilities. >> Described visually,
+we'll no longer find the best fit line, shown in red, very helpful to us. As our outcome variable
+cannot take on any value. Instead, we're saying that there
+is somewhere along our X axis. Where our outcome variable moves
+from being more likely to be a zero to be more likely to be a one. Our goal will be to
+quantify the probability of getting a one versus a zero for
+given value on our X axis. >> In order to better answer
+our research question, we will choose odds ratios
+as opposed to coefficients. The odds ratio is the probability
+of an even occurring in one group compared to the probability of
+an event occurring in another group. Odds ratios are always given in
+the form of odds and are not linear. Odds ratios are often a confusing topic
+for students when they're first introduced to it so it will be important to
+go through it conceptually and better understand exactly what
+an odds ratio is and what it means. >> An odds ratio can range from
+zero to positive infinity. And is centered around the value one. If we ran our model and
+got an odds ratio of one. It would mean that there's an equal
+probability of nicotine dependence among those with and without social phobia. Those with social phobia are equally
+as likely to be nicotine dependent as those without. It's also likely then that our model
+would be statistically non-significant. If an odds ratio is greater than one. It means that the probability of becoming
+nicotine dependent increases among those with social phobia
+compared to those without. In contrast,
+if the odds ratio is below one. It means that the probability of becoming
+nicotine dependent is lower among those with social phobia than
+among those without. So how do we calculate the odds ratio? It is possible to do this by hand. The odds ratio is the natural
+exponentiation of our parameter estimate. Thus, all that we need to do
+is calculate the natural log to the power of our parameter estimate. However, we could also
+let Python do this for us by adding the following Python code. First we ask Python to print
+the title odds ratios. Then in the second line of code,
+we ask Python to print the odds ratios which are computer using the NumPy.exp,
+or exponentiate, function. In parenthesis we add the object that
+contains the parameter estimates, P-A-R-A-M-S, from our lreg1 model. Here are the results. Because both my explanatory and response variables in the model
+are binary, coded zero and one. I can interpret the odds
+ratio in the following way. Young adult daily smokers in my sample
+with social phobia are 3.4 times more likely to have nicotine dependence than
+young adult smokers without sociaphobia. We can also get a confidence interval for
+our odds ratio. Remember that our data set is
+just a sample of a population. We do not have every young adult
+daily smoker in the US in our sample. Even thought the odds ratio for
+our sample is 3.4, the true population odds ratio might be slightly different
+due to random variation in sampling. The code to print the confidence
+intervals for the odds ratio is here. In the first line of code,
+we create an object called params. P-A-R-A-M-S. That includes the perimeter estimates from
+our lreg1 logistic progression model. In the second line of code we create
+an object called cnof that uses a stats model conf_int () command to
+return the confidence levels for the parameters estimates. In the third and fourth line of code,
+we create an odds ration object with column labels of
+'Lower CI' Upper CI and OR. Finally, print the conference intervals
+using the numpy.exp function to compute the odds ratios from the parameter
+estimates in the conf object. The odds ratio indicates that
+there's a 95% certainty that the 2 population odds ratio
+fall between 1.78 and 6.61. It's important to keep in
+mind that the odds ratio is simply a statistic calculated for
+the sample. >> So looking at the confidence interval,
+we can get a better picture of how much this value would change for a different
+sample drawn from the population. Based on our model those
+with social phobia are anywhere from 1.78 to 6.61 times more likely to have a nicotine dependence
+than those without social phobias. The odds ratio is a sample statistic and the confidence intervals are an estimate
+of the population parameter.

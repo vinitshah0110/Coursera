@@ -1,0 +1,95 @@
+So how do we find the equation
+of this best fit line? In Python we'll be using
+the ordinary less squares or OLS function from the stats
+model formula API library. Here is a general code that we would use
+to estimate the regression equation. This code might look familiar to you,
+because we use the same smf.ols function to test an analysis of variance in
+course two, data analysis tools. First I name the object that will
+be produced by the ols function. Then an equal sign followed
+by the function smf.ols from the stats model formula api library. Then, within parenthesis I write my
+formula including the name of my quantitative response variable, which is called quant underscore
+response in the model. Followed by a tilde and the name of
+my quantitative explanatory variable QUANT_EXPLANATORY. Note that my entire formula is
+enclosed within quotation marks. I add a comma then type data= and
+the name of my dataframe. Outside the parenthesis I type .fit
+followed by an open and closed parenthesis, to require fit statistics for
+the model I have just defined. THen as always, I need to ask Python
+to print the fit statistics for my model using the print function,
+and in parentheses, the name of my object .summary, and
+then open and closed parentheses. For this sample research question
+from the Gapminder data set, we first import
+the libraries we will need. Numpy, Pandas, Statsmodel API as SM and Statsmodel Formula API as SMF. Note that we are giving
+the Statsmodel API library. The abbreviated name sm. In the stats model formula API library,
+the abbreviated name smf. These are the names that we will use
+to refer to these libraries later on in the Python script. Then, we call in the gapminder data
+set using the read.csv function. And make sure that we convert the variable
+types to numeric with the Pandas' to numeric function. We use the print function to have Python
+print the title, OLS regression model for the association between urbanrate and internet use rate, as part of
+the output that will be displayed in the iPython console in the lower
+right hand corner of the screen. We give the object that will be produced
+by the ols function the name reg1. Followed by an equals sign. After the equals sign, we include smf.ols. Within parentheses,
+I then write my formula. The name of my quantitative
+response variable. Internet use rate, followed by a tilde and the name of my quantitative
+explanatory variable urban rate. Note again that the entire
+formula is in quotes. I add a comma after the formula in quotes then the name of the data frame I'm
+working with which is called data. Finally I ask Python to print
+the results for my model reg1. Let's run this program and
+look at the output in the iPython console. Dep variable shows us the name
+of the response variable. And No dot Observations
+shows us the number of observations that had valid data on both
+the response and explanatory variables. And were therefore
+included in the analysis. The F-statistic is 113.7. And the P value is very small. Considerably less than
+our alpha level of .05, which tells us that we can
+reject the null hypothesis and conclude that urban rate is significantly
+associated with internet use rate. Next let's move to
+the parameter estimates, which are in the C-O-E-F, coef, column. Here we have the estimates,
+also known as coefficients or beta weights, for both our intercept and
+for the variable urbanrate. Thus, the coefficient for urbanrate
+is 0.72, and the intercept is -4.90. So now we know that our equation for
+the best fit line of this graph is Internet user rate equals minus
+4.90 plus .72 times urban rate. Before we analyze this equation
+a little more in depth, let's look at some more components for
+our output. Looking just at the output for the
+coefficients, we have a column labeled, p greater than absolute value of t,
+which gives us the p value for our explanatory variables,
+association with the response variable. This p value, will be the same one we
+get if we run a pair synch correlation on these two variables. The p value is 0.000 which
+means that it's really small. Here you would report the p value p<.0001. The OLS function also
+gives R-squared value. A value that we talked
+about in course two. Data analysis tools and
+the module on Pearson correlation. It is the proportion of the variance
+in the response variable that can be explained by
+the explanatory variable. We now know that this model accounts for about 38% of the variability we see in
+our response variable, Internet use rate. >> Look at how our equation is written. y is a function of the variable x and
+some constant. Thus as x changes y will change with it. In building this model we're saying
+that we believe that x relates to y in some meaningful way. What's exciting about this equation Is that we can also use it to
+generate predicted values for y. The symbol that we use for
+predicted values of y is y hat. For example, let's say we're told
+that a country has 80% urbanization. Can we predict their
+level of Internet use? Yes. We just plug the value 80 into our
+equation where we have our x value. As you can see,
+in a country with 80% urbanization, we would expect 52.7 people out
+of every 100 to use the Internet. Also note from our beta1,
+that this value is by how much internet use would increase, for
+every one unit increase in urbanrate. For example, if we had a country
+with 81 percent urbanization. We would know that we would expect
+their internet use rate to be 0.72 people higher. That is almost one person than
+a country with 80 percent urbanization. However, note that this is only
+the expected internet use rate given what we know about urbanization. It's the value that rests
+exactly on the best fit line. Unless our data were perfectly correlated. We would anticipate that
+our expected value and our observed value would differ
+from one another to some extent. From our analysis,
+we now know that there's a statistically significant association between
+urban rate and Internet use rate. And we can also tell you what we would
+expect internet use rate to be for a given country given its urban rate. This statistical model has opened the
+doors to being able to better understand what's really going on between
+Internet use rate and urbanization. As long as we keep in mind
+that we're limited by the fact that we impose the causal model. Rather than being able to
+directly test for causation. And that expected data is not
+the same as observed data. We're still able to explain much
+about this relationship of interest. >> For example,
+Canada has an urban rate of about 80%. However, its Internet use rate
+is observed at 81.3 not 52.7, this is exactly why we include
+an error term in our model. We are not perfect diviners of the future. What we can do with statistics however,
+is identify trends in our data, and use those trends to look at what we
+would expect our data to look like. These trends are incredibly important.
