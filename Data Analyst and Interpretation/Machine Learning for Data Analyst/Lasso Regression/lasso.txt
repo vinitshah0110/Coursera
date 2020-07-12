@@ -1,0 +1,43 @@
+So let's see how we test a Lasso
+regression model in Python. First, I will call in
+the libraries that I will need. In addition to the pandas, numpy,
+and matplotlib libraries I'll need the train_test_split function from
+the sklearn.cross_validation library, and the LassoLarsCV function from
+the sklearn.linear_model library. After I call in the data set
+using the pd.read_csv function, I'll do a little extra data management. Namely, I want to create a new dataset
+called data_clean in which I will delete observations with missing data on any of
+the variables using the dropna function. Then, I want to create a variable for
+gender called male, that is coded zero for female and one for male, like the other
+binary variables in the data set. Next, I will create two data frames. The first, called predvar,
+P-R-E-D-V-A-R, will include only the predictor variables that
+I will use in the lasso regression model. The second, called target, will include only my school
+connectedness response variable. In lasso regression,
+the penalty term is not fair if the predictive variables
+are not on the same scale, meaning that not all the predictors
+get the same penalty. So I will standardize all the predictors
+to have a mean equal to zero and a standard deviation equal to one,
+including my binary predictors, which will put them all on the same scale. To standardize the predictors, I'm going to first create a copy of my
+predvar data frame and name it predictors. Then, I'm going to import the
+preprocessing function from the sklearn library. I will list the name of my predictor
+variable = preprocessing.scale. The preprocessing.scale function
+transforms the variable to have a mean of zero and a standard deviation of one, thus putting
+all the predictors on the same scale. Then, in parentheses I type
+the name of my variable again, and add .astype('float64'). The as type float 64 code ensures that my
+predictors will have a numeric format. In the next line of code, I will use the
+train test split function from the sklearn cross validation library to randomly split
+my data set into a training data set consisting of 70% of the total
+observations in the data set. And a test data set consisting of
+the other 30% of the observations. First, I list the two training data sets. The first data set, called pred_train,
+will include the predictor variables from my training data set and
+a second data set, called pred_test, will include the predictor
+variables from my test data set. The third data set, called tar_train, will include the response variable from my
+training data set and the fourth data set, called tar_test, will include the response
+variable for my test data set. Then I type the function name,
+train_test_split and in parentheses, I list my full predictors and target data
+set names with commas separating them. The test_size option tells
+Python to randomly place 30% of the observations in the pred_test and
+pred_tar test data sets. By default, the other 70% of
+the observations are placed in the pred_train and
+tar_train training data sets. The random_state option specifies a random
+number seed to ensure that the data are randomly split the same
+way if I run the code again.

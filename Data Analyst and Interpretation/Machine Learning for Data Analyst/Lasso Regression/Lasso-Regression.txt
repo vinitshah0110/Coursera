@@ -1,0 +1,66 @@
+Lasso regression is what is called
+the Penalized regression method, often used in machine learning to
+select the subset of variables. It is a supervised
+machine learning method. Specifically, LASSO is a Shrinkage and Variable Selection method for
+linear regression models. LASSO, is actually an acronym for Least
+Absolute Selection and Shrinkage Operator. The LASSO imposes a constraint on the sum
+of the absolute values of the model parameters, where the sum has
+a specified constant as an upper bound. This constraint causes
+regression coefficients for some variables to shrink towards zero. This is the shrinkage process. The shrinkage process allows for better
+interpretation of the model and identifies the variables most strongly associated
+with the target corresponds variable. That is the variable selection process. It goes to obtain the subset of predictors
+that minimizes prediction error. So why use Lasso instead of just
+using ordinary least squares multiple regression? Well, first, it can provide
+greater prediction accuracy. If the true relationship between
+the response variable and the predictors is approximately linear and
+you have a large number of observations, then OLS regression parameter estimates
+will have low bias and low variance. However, if you have a relatively small
+number of observations and a large number of predictors, then the variance of the
+OLS perimeter estimates will be higher. In this case, Lasso Regression is
+useful because shrinking the regression coefficient can reduce variance without
+a substantial increase in bias. Second, Lasso Regression can
+increase model interpretability. Often times, at least some of the
+explanatory variables in an OLS multiple regression analysis are not really
+associated with the response variable. As a result, we often end up with
+a model that's over fitted and more difficult to interpret. With Lasso Regression, the regression
+coefficients for unimportant variables are reduced to zero which effectively
+removes them from the model and produces a simpler model that selects
+only the most important predictors. In Lasso Regression,
+a tuning parameter called lambda is applied to the regression model to
+control the strength of the penalty. As lambda increases, more coefficients
+are reduced to zero that is fewer predictors are selected and there is more
+shrinkage of the non-zero coefficient. With Lasso Regression where lambda
+is equal to zero then we have an OLS regression analysis. Bias increases and
+variance decreases as lambda increases. To demonstrate how lasso regression works,
+let's use and example from the ad help data set in which
+our goal is to identify a set of variables that best predicts the extent to which
+students feel connected to their school. We will use the same ad-health
+data set that we used for the decision tree in random forced
+machine learning applications. The response or target variable is a quantitative variable
+that measures school connectedness. The response values range from 6 to 38, where higher values indicate
+a greater connection with the school. There are a total of 23 Categorical and
+Quantitative predictor variables. This is a pretty large number
+of predictor variables, so using OLS multiple regression
+analysis would not be ideal, particularly if the goal is
+to identify a smaller subset of these predictors that most accurately
+predicts school connectedness. Categorical predictors include gender and
+race and ethnicity. Although Lasso Regression models can
+handle categorical variables with more than two levels In conducting
+my data management, I created a series of five binary
+categorical variables for race and ethnicity, Hispanic, White, Black,
+Native American, and Asian. I did this to improve interpratability
+of the selected model. Binary substitutes variables for measure
+with individual questions of about whether the adolescent had ever used alcohol,
+marijuana, cocaine, or inhalants. Additional categorical variables include
+the availability of cigarettes in the home, whether or not either
+parent was on public assistance, and any experience with being
+expelled from school. Finally, quantitative predictive
+variables include age, alcohol problems, and a measure of deviance. That includes such behaviors as vandalism,
+other property damage, lying, stealing, running away, driving without permission,
+selling drugs, and skipping school. Another scale for violence,
+one for depression and others measuring self-esteem,
+parental presence, parental activities, family connectedness, and
+grade point average were also included. For more complete details on how
+these variables were constructed, see the Dicker, et al. 2004 paper from Prevention Science and
+the SAS program called decision trees data management that have been made
+available as additional resources.
