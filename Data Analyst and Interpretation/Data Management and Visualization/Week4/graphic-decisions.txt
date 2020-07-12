@@ -1,0 +1,148 @@
+The first question is,
+what type is the response variable? Is it Categorical or Quantitative? For our sample research question,
+the response or dependent variable is Nicotine Dependence
+which is Categorical. Next, we need to determine how many
+categories are in this response variable. Since Nicotine Dependence is coded 1 for
+yes, or present, and 0 for no, or absent, we have two
+categories in the response variable. The next question to ask is,
+what type is the explanatory variable? The explanatory or independent variable
+is number of cigarettes smoked per month. As we saw in the demonstration
+of histograms, this is a Quantitative variable. Since it won't be visually meaningful to
+examine a bar chart with a quantitative explanatory variable on the Y axis, when our response variable
+is actually categorical. Before we start to graph, it's important to bin our explanatory
+variable into categories. That is, in order to visualize
+the relationship that we're interested in, we need to add some data management that
+will allow us to construct a C to C, or categorical to categorical, Bar Chart. >> Because, by default, the Pandus library
+often displays an abbreviated list of rows and columns from our data frame. And I know the number of values for
+numsigmo_est is fairly long, I'm going to add additional set option
+statements following the library import syntax that requests a display of
+the maximum number of rows and columns. The default in Python, you may have
+noticed, limits this display to a subset of the data frame, and so
+including display, max, columns, or rows, none, removes that limit and allows
+all rows and columns to be displayed. Now, after viewing the output,
+we can use the various cut functions from Python's pandas library to group
+individuals in various ways. For example into quartiles,
+roughly four equal groups in size. However, in this case it
+seems a better decision might be to create more meaningful smoking
+groups based on specific quantities. Cigarette packs contain
+20 cigarettes each. We're going to create a new variable
+that estimates the number of packs that each individual smokes per month,
+rather than the number of cigarettes. This could be a step closer to
+a categorical variable that's meaningful. The new variable is packs per month and it is set equal to the number of
+cigarettes smoked per month divided by 20. Then, I add this new variable,
+packs per month, to a buy group output statement so we can
+view this new frequency distribution. Packs per month is still
+a quantitative variable, but now we can more easily create groups based
+on number of packs smoked in a month. After examining
+the frequency distribution, I decide to create groupings
+that include those who've smoked less than 1- 5 packs per month,
+6- 10 packs per month, 11- 20, 21- 30 and
+then 30+ packs per month. To accomplish this,
+I add the following syntax to my program. When we add this new variable pack
+category to a describe statement and then run the program, we can examine
+some basic descriptive statistics. But don't forget to let Python know
+that the new variable packcategory, should be treated as categorical. We can also examine the frequency
+distribution for this new packcategory variable, representing
+packs of cigarettes smoked per month. Here we see the number of young
+adult smokers in each group. Back to our graphing decisions flow chart. Now that we've collapsed our Explanatory
+Quantitative variable, smoking, into categories, we're ready to make our C
+to C, or category to category bar chart. When graphing the relationship between
+a categorical explanatory variable and a categorical response variable,
+we use the following code. This time, we use the factorplot
+function from the seaborn package. We name the categorical explanatory
+variable for the x-axis, here PACKCATEGORY, and also the response
+variable for the y axis TAB12MDX. And define the data frame here sub2
+where the variables can be found. Kind= bar requests a bar chart. And ci=none suppresses error bars, which you will learn more about
+in our statistical tools course. Again, with the xlabel function we
+are able to label the x-axis, and with the ylabel function, the y-axis. Note, that for a bivariate graph, where our response variable
+is categorical, we will actually need to convert this categorical
+response variable back to numeric. This is because the bivariate graph
+displays a mean on the y axis, which translates into the accurate proportion
+of individuals with nicotine dependence. Now, how's that possible? Remember that our categorical
+response variable should not have more than
+two categories or levels. And those two categories
+should be coded 0 and 1. 0 represents no or
+negative observations, and 1 represents yes or positive observations. In this format, requesting the mean
+of our categorical response variable, actually gives us the proportion
+of ones or positive observations. However, as you saw from our
+work with the describe function, Python will not calculate a mean once
+the variable has been set to categorical. So I also need to add this syntax before
+requesting a bivariate graph which transforms TAB12MDX into
+a numeric variable. When I save and run this, I can examine
+our categorical by categorical bar chart. Packcategory or
+explanatory variable is on the x axis and this is by the rate or proportion of
+nicotine dependent individuals within each pack category along the y axis. So you can see from the graph, among those
+smoking one to five packs per month, about 25% of those individuals
+are nicotine dependent. Among those smoking six to ten packs
+a month, 50% are nicotine dependent. Among those smoking 11 to 20 packs month,
+58% are nicotine dependent. Among those smoking 21 to 30 packs per
+month, almost 70% are nicotine dependent. And among those smoking
+more than 30 packs a month, more than 70% are nicotine dependent,
+around 77%. We can also see that these
+rates form a pattern. That is, the more packs smoked per month, the higher the rate of
+nicotine dependence. So in a graphical way we're already seeing
+that there seems to be a relationship between smoking and nicotine dependence,
+as we hypothesized. >> Looking at our graphing decisions
+chart, we can see the steps we've taken to generate a bivariate graph with
+a Categorical response variable that has two categories and
+a Quantitative Explanatory variable. We also discussed how to convert
+the Quantitative Explanatory variable to a Categorical variable. A step which must be taken for the
+purposes of visualizing the relationship. If our Explanatory variable was originally
+Categorical rather than Quantitative, we could have skipped this step, and just moved on to a categorical
+by categorical bar chart. What decisions need to be made if
+the response variable has more than two categories? In this case, we would need to collapse
+a Response variable categories, into two categories. To demonstrate this, we'll have
+to modify the research question. So let's modify the research question
+to look at the association between ethnicity and smoking stage. And we'll create a Response Variable that
+categorizes young adult smokers into Three Groups, Non-daily Smokers,
+Daily Smokers, and those with Nicotine Dependence. >> These are the ethnic groups recorded in
+the NESARC code book along with the syntax that we can use to create
+a three-category smoking stage variable. I am naming a new variable here, SMOKEGRP,
+creating the temporary variable called, row, where I ask Python to
+return specific values, here 1 through 3 under certain conditions. If TAB12MDX equals 1,
+if USFREQMO equals 30, and a third group which includes
+the rest of our young adult smokers who are neither nicotine dependent nor
+daily smokers. Notice that I have used elif,
+known as else if, and also else. Using if the first row
+draws on the whole sample. Else if, or elif draws on what
+remains of the sample after the ones, that is in those with nicotine
+dependents have been assigned a 1. And else followed by a colon literally
+puts everyone else in category 3 after the nicotine-dependent and daily smokers have already been
+assigned values of 1 and 2. >> This sample can be described with
+these three smoking categories. This bar chart shows that about
+50% of the young adult sampled are Nicotine Dependent. About 30% are Daily smokers
+without nicotine dependence and almost 17% are Non-daily smokers. However, to examine a relationship
+between this variable as the response variable in another, we need to
+collapse this to only two categories. To do this,
+we need to make some decisions. Here are two perfectly reasonable
+decisions that we could make. We could examine the association
+between ethnicity and daily versus non-daily smokers. Or we could examine the association
+between ethnicity and nicotine dependent versus
+non-nicotine dependent individuals, thereby collapsing across
+these categories in some way. In either case, some data management
+needs to be added to the program. >> To collapse the response variable
+into daily versus non-daily smokers, we can use this syntax. If USFREQMO equals 30,
+that is, if the individual smokes 30 days a month, then return
+a 1 for the new variable daily. Elseif, noted as elif, USFREQMO is not equal to 30, that is, not equal to smoking 30 days per month,
+then return a 0 for daily. Now we can again graph the relationship between our categorical explanatory
+variable ethnic group and this two-level categorical
+response variable, daily smoking. Remember our categorical response variable should not have more than
+two categories or levels. And those two categories should
+be coded as one and zero. Zero representing no or negative and
+one representing yes or positive. In this format, requesting the mean
+of our categorical response variable, actually gives us the proportion
+of ones or positive observations. Notice that the dummy codes for our ethnicity variable are not
+ordered on the x axis and because they are dummy codes, the graph
+is something difficult to interpret. You can rename categorical variable
+values for graphing, first by changing the variable format to categorical
+if you haven't already done so. Second, by giving
+the variable ETHRACE2A new value labels with cat.rename_categorical. Here is our new graph. As you can see, the rate of daily smoking is somewhat
+lower among Native American and Hispanic young adults who have smoked in the past
+year compared to each of the other groups. >> Because a response variable was
+Categorical with more than two categories, we needed to collapse it
+into only two categories. And because our explanatory
+variable ethnicity was Categorical, we created a Categorical
+by Categorical Bar Chart. Had our explanatory
+variable been Quantitative, we would have needed to bin or collapse
+that variable into categories before creating the Categorical
+by Categorical Bar Chart.

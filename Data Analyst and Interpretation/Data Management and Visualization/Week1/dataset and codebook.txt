@@ -1,0 +1,82 @@
+A few of the data sets that are available
+include, the National Longitudinal Study of Adolescent Health,
+commonly known as Add Health. This is a nationally representative
+school-based survey. Wave one of the survey included
+adolescence in grades 7 through 12 in the United States. Add health includes survey data on social,
+economic, psychological, and physical wellbeing of adolescents. Next is the Mars Crater Study. As you may know, the planet Mars has
+terrain that is heavily cratered. These craters were created
+about 4 billion years ago during a period of heavy bombardment from
+asteroids, protoplanets, and comets. Made available by researchers at
+the University of Colorado Boulder, this dataset includes characteristics of
+more than 350,000 of these Mar's craters. Also available is a portion of the Wave 1,
+National Epidemiologic Study of Alcohol and Related Conditions,
+commonly known as NESARC. This is a representative sample of the US
+adult population age 18 and older. And it includes data on mental health and substance use disorders that
+are experienced by adults. Another data set is
+the gap minder dataset. Which is made available by gapminder.org. It includes numerous
+measures from 195 countries. The data had been collected
+from various sources, including the World Health Organization,
+the International Agency for Research on Cancer,
+the United Nations and the World Bank. In order to help you learn more about
+these data sets and which one you are most interested in you'll be reviewing the
+available codebooks from these data sets. Sometimes called data dictionaries, codebooks commonly offer complete
+information regarding the data set. That is general topics addressed, questions and/or measurements used
+to record each of the variables. And in some cases,
+the frequency of responses or values of each of the variables. Reviewing a codebook is always the first
+step in research based on existing data. First of all, codebooks can be used
+to generate research questions. Second of all, data is often useless and
+completely uninterpretable without them. The code book describes how the data
+are arranged in the computer file. What the various numbers and letters mean, and any special instructions
+on how to use the data properly. Like any other book,
+some codebooks are better than others. In the Add Health codebook each variable
+has a description of what is measured. In this case it's the question
+of what grade you're in. A code book will also include the various
+measurement or response options. For this variable, possible response
+options include 7th through 12th grade, refusal to answer the question,
+a legitimate skip for those not in school, don't know and the school does
+not have the grade levels, or the question is not applicable. Aside from including a listing or description of the response options for
+the variable, the code book will also include corresponding values
+that can be found in the data set. As we saw previously with the medical
+records data set example, data sets typically include
+numbers rather than words. So for
+categorical variables such as grade level, each of the response options has
+a corresponding numeric value. And it's that numeric value that
+can be found in the data set. You can see that 7th through 12th
+graders are logically coded as the numbers 7 through 12. 96 indicates that the adolescent
+refused to answer. 97 indicates a legitimate skip for the adolescents who are not
+currently in school. 98 indicates don't know. And 99 is recorded in a case where
+the school does not have grade levels. These numeric values
+are known as dummy codes, as they are included in the data set but
+they carry no direct numeric meaning. Here's an excerpt from
+the Mars Craters Code Book. It includes a description
+of the variables for the crater's name, latitude,
+longitude and diameter. Also the depth of the crater's rim as well
+as the variable's name in the data set. Because most of these
+are quantitative variables, rather than listing a response option the code book includes a description
+of how the variable is measured. For example, latitude is measured
+in decimal degrees North, longitude is measured in decimal
+degrees East and both diameter and depth are measured in kilometers. From the Gapminder data set we see a
+slightly different look to the code book, but very similar features. You can see that the middle column
+describes each of the variables. The column on the left indicates
+the variable name used in the data set. And finally the right hand
+column lists the source of data. Again these are quantitative variables. The codebook includes information about
+how each of these variables were measured. You can see that income per
+person is measured in US dollars. Alcohol consumption is measured
+in liters of pure alcohol. Armed forces is measured as the percent
+of the total labor force, and breast cancer rate is measured as
+new cases per 100,000 females. >> So I chose Add Health. I was really interested in health and
+specifically for young adults or adolescents. >> Me, being natural sciences, I was
+kind of drawn to the Mars crater study. >> I knew that I wanted to
+connect it to whatever I'm doing with music and Latin American research. >> So I use the Gap Minder data set,
+it's more worldly, economically, excellent for
+comparing things across countries. >> My data came from Add Health. >> I think it was about 39 different code
+books and each of them could have up to like 30 different questions, so we had
+a lot of data we could look through. But it was organized into topics. So I looked at the code book that
+discussed parental relationships, of the code book that discussed
+sibling relationships. >> They were describing
+these craters with like such funny descriptions that I
+would never have thought of. And so that kinda drew me in. Like I was wondering why scientists
+were naming these things. >> Each student can look at the same data
+set, but come up with a different research question and they could choose to
+analyze it in a different way and where they take that is
+completely their own.

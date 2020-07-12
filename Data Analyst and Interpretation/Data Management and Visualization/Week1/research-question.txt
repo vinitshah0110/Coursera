@@ -1,0 +1,69 @@
+Now you have a general feel for
+data sets, variable types and code books. The next step is to select one
+of the data sets: Add Health, Mars Craters, NESARC, Gapminder,
+or another one that you've chosen out of the data sets that have been
+made available to you for the course. Select a data set that includes
+variables in an area that interests you. >> Once you have selected the data sets,
+identify a specific topic of interest, and print those pages of the code
+book that include the variable or variables that measure
+your selected topic. Note that many code books, including
+those of NESARC and ADHEALTH, are too large to print, so it is very important to
+create your own personal code book with only those pages that include the
+variables that you would like to examine. >> Our example comes from
+the NESARC data set, and our chosen topic is nicotine dependence. There are several variables related to
+Nicotine Dependence, and we can see 2 here: life-time nicotine dependence and
+nicotine dependence in the past 12 months. A value of zero to these variables
+indicates no Nicotine Dependence, and a value of 1 indicates
+the presence of Nicotine Dependence. The name of these variables
+are TAB12MDX and TABLIFEDX. We'll use these variable names when
+we begin to work with the data. >> We're not suggesting this topic
+is more or less interesting, or more or less important than any other. What's important is that you pick
+a topic that is of interest to you. We've chosen to look at
+nicotine dependence. >> Once you have a topic and
+have printed the code book pages that measure that topic,
+it's time to build a research question. One of the simplest research
+questions that can be asked is whether two topics
+are associated with one another. For example, is medical treatment
+seeking associated with income? Is crater depth associated
+with crater diameter? Is water fluorination associated with
+number of cavities during dentist visits? These data sets are vast, so there are
+many potential associations to explore. Let's look at our chosen
+example: nicotine dependence. >> First I need to determine what
+it is about nicotine dependence that interests me. It strikes me that friends and acquaintances that I've
+known throughout the years, that became hooked on cigarettes did so
+across very different periods of time. Some seemed to be dependent
+on smoking heavily soon after their first experience
+with a cigarette, and others after many years of generally
+irregular smoking behavior. >> We decide that we are most interested
+in exploring the association between smoking behavior and nicotine dependence. We believe that they
+are positively associated. That is to say,
+the more an individual smokes, the more likely they are to
+be nicotine-dependent. We're also wondering how much a person
+needs to smoke in order to be nicotine dependent. >> We continue to read through
+the NESARC code book, and find that smoking behavior has
+also been measured in this sample. So, next, I take a step similar to one that I just
+took when choosing nicotine dependence. That is, identify the variables
+that measure the second topic, smoking behavior, in my data set. The variables I choose include cigarette
+smoking status, usual frequency, and usual quantity. >> During your second
+review of the code book for the data set that you have selected, you
+should also identify a second topic that you'd like to explore in terms of it's
+association with your original topic. And, again, print those pages of the code
+book that include the variable, or variables, that measure
+the second selected topic. [MUSIC] >> The research question find
+was kind of hard for me. But I found it, and it was a lot of trial and error and a lot
+of searching for all these code books. >> I chose to look at the association
+between adolescent self esteem and level of parental involvement,
+to see if there is a correlation there. >> So from my product, I looked
+specifically at Intermediate Creators, Layered Adjusted Morphology
+which is basically like, if you were to stomp on a pedal or like
+step on a pedal, you would create a splash that would just like come out like this,
+and that is what you call an ejecta. >> So the question that I got invested in
+was the relationship between parenting or parental styles and
+further adult relationships. >> I looked at binge
+drinking young adults and treatment seeking patterns
+based on arrests. >> Some questions almost have
+never been really asked, at least not in a statistical manner. >> We're encouraged to
+do original research, so actually we're not even supposed
+to do what other people have done. Supposed to look at information
+that we're interested in, find out where research has stopped and
+asked the next question. [MUSIC]
